@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_on_off.png",
+        "source": "F:\\AndroidStudioProject\\demo_app\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_on_off.png"
+    },
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_discover.png",
+        "source": "F:\\AndroidStudioProject\\demo_app\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_discover.png"
+    },
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_discover.png",
+        "source": "F:\\AndroidStudioProject\\demo_app_2\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_discover.png"
+    },
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "F:\\AndroidStudioProject\\demo_app_2\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "F:\\AndroidStudioProject\\demo_app\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_on_off.png",
+        "source": "F:\\AndroidStudioProject\\demo_app_2\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_on_off.png"
+    }
+]
