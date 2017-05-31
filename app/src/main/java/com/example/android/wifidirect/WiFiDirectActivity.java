@@ -194,6 +194,7 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
 
     }
 
+    /*
     @Override
     public void connect(WifiP2pConfig config) {
         manager.connect(channel, config, new ActionListener() {
@@ -206,6 +207,24 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
             @Override
             public void onFailure(int reason) {
                 Toast.makeText(WiFiDirectActivity.this, "Connect failed. Retry.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    */
+
+    @Override
+    public void connect(WifiP2pConfig config){
+        manager.createGroup(channel, new WifiP2pManager.ActionListener() {
+
+            @Override
+            public void onSuccess() {
+                // Device is ready to accept incoming connections from peers.
+            }
+
+            @Override
+            public void onFailure(int reason) {
+                Toast.makeText(WiFiDirectActivity.this, "P2P group creation failed. Retry.",
                         Toast.LENGTH_SHORT).show();
             }
         });

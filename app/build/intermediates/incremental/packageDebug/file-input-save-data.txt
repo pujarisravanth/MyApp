@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 23 11:54:55 IST 2017
+#Tue May 30 22:14:15 IST 2017
 8.set=ANDROID_RESOURCE
 1.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
 1.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\icon.png
@@ -10,7 +10,7 @@
 5.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\assets\\debug
 5.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\assets\\debug\\sample_file.txt
 7.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
-7.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\ic_action_on_off.png
+7.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\device_detail.xml
 11.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-land\\main.xml
 11.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
 9.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -41,7 +41,7 @@
 10.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-large-v4\\main.xml
 13.set=ANDROID_RESOURCE
 8.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
-8.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\device_detail.xml
+8.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\ic_action_on_off.png
 2.set=ANDROID_RESOURCE
 12.file=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
 12.base=F\:\\AndroidStudioProject\\demo_app_2\\app\\build\\intermediates\\res\\resources-debug.ap_
