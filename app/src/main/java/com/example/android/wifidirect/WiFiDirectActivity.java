@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pGroup;
+import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.ActionListener;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
@@ -51,6 +53,8 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
 
     public static final String TAG = "wifidirectdemo";
     private WifiP2pManager manager;
+    //private WifiP2pGroup group;
+    //private boolean isGroupFormed = false;
     private boolean isWifiP2pEnabled = false;
     private boolean retryChannel = false;
 
@@ -94,7 +98,6 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
             method.invoke(manager, channel);
 
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -151,7 +154,40 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
                     // not going to send us a result. We will be notified by
                     // WiFiDeviceBroadcastReceiver instead.
 
-                    startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                    //startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                    manager.createGroup(channel, new WifiP2pManager.ActionListener() {
+                        @Override
+                        public void onSuccess() {
+                            // Device is ready to accept incoming connections from peers.
+                            try {
+                                Class<?> wifiGroup = Class.forName("android.net.wifi.p2p.WifiP2pGroup");
+
+                                //Method method = wifiManager.getMethod("enableP2p",
+                                //       new Class[] { android.net.wifi.p2p.WifiP2pManager.Channel.class });
+
+                                Class[] string = new Class[1];
+                                string[0] = String.class;
+
+                                Method setPassPhraseMethod = wifiGroup.getMethod("setPassphrase",
+                                        string);
+
+                                setPassPhraseMethod.invoke(wifiGroup, "123456789");
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                            Toast.makeText(WiFiDirectActivity.this, "Group is created",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(int reason) {
+                            Toast.makeText(WiFiDirectActivity.this, "P2P group creation failed. Retry.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                 } else {
                     Log.e(TAG, "channel or manager is null");
                 }
@@ -194,7 +230,6 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
 
     }
 
-    /*
     @Override
     public void connect(WifiP2pConfig config) {
         manager.connect(channel, config, new ActionListener() {
@@ -207,24 +242,6 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
             @Override
             public void onFailure(int reason) {
                 Toast.makeText(WiFiDirectActivity.this, "Connect failed. Retry.",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-    */
-
-    @Override
-    public void connect(WifiP2pConfig config){
-        manager.createGroup(channel, new WifiP2pManager.ActionListener() {
-
-            @Override
-            public void onSuccess() {
-                // Device is ready to accept incoming connections from peers.
-            }
-
-            @Override
-            public void onFailure(int reason) {
-                Toast.makeText(WiFiDirectActivity.this, "P2P group creation failed. Retry.",
                         Toast.LENGTH_SHORT).show();
             }
         });
