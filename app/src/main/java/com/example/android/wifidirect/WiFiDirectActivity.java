@@ -155,27 +155,31 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
                     // WiFiDeviceBroadcastReceiver instead.
 
                     //startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+
+                    /*
+                    try {
+                        Class<?> wifiGroup = Class.forName("android.net.wifi.p2p.WifiP2pGroup");
+
+                        //Method method = wifiManager.getMethod("enableP2p",
+                        //       new Class[] { android.net.wifi.p2p.WifiP2pManager.Channel.class });
+
+                        Class[] string = new Class[1];
+                        string[0] = String.class;
+
+                        Method setPassPhraseMethod = wifiGroup.getMethod("setPassphrase",
+                                string);
+
+                        setPassPhraseMethod.invoke(wifiGroup, "123456789");
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    */
+
                     manager.createGroup(channel, new WifiP2pManager.ActionListener() {
                         @Override
                         public void onSuccess() {
                             // Device is ready to accept incoming connections from peers.
-                            try {
-                                Class<?> wifiGroup = Class.forName("android.net.wifi.p2p.WifiP2pGroup");
-
-                                //Method method = wifiManager.getMethod("enableP2p",
-                                //       new Class[] { android.net.wifi.p2p.WifiP2pManager.Channel.class });
-
-                                Class[] string = new Class[1];
-                                string[0] = String.class;
-
-                                Method setPassPhraseMethod = wifiGroup.getMethod("setPassphrase",
-                                        string);
-
-                                setPassPhraseMethod.invoke(wifiGroup, "123456789");
-
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
 
                             Toast.makeText(WiFiDirectActivity.this, "Group is created",
                                     Toast.LENGTH_SHORT).show();
